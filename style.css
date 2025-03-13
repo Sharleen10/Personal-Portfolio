@@ -1018,8 +1018,25 @@ h2 {
         display: block;
         margin: 4rem 0;
     }
+    .home{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 2rem;
 
+    }
+
+    .home-img .img-box{
+        width: 25rem;
+        height: 25rem;
+    }
+
+    .about-container, .cert-container .container-cont{
+        grid-template-columns: 1ref;
+    }
    
+    .about-container{
+        gap: 3rem;
+    }
     
 }
 
