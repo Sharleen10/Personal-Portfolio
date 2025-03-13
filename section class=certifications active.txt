@@ -1,0 +1,96 @@
+<section class="certifications active">
+    <h2 class="heading">My <span>Certifications</span></h2>
+    <div class="company-logos">
+        <img src="images/IBM.png" alt="IBM Logo" onclick="showCerts('IBM')">
+        <img src="images/Great Learning.png" alt="Great Learning Logo" onclick="showCerts('GreatLearning')">
+        <img src="images/coursera.png" alt="Coursera Logo" onclick="showCerts('Coursera')">
+    </div>
+    
+    <div id="IBM" class="cert-container">
+        <div class="cert-box">
+            <h3>Data Science & Analytics Intro</h3>
+            <p>Issued by IBM</p>
+            <a href="certificates/Data_Science_IBM.pdf" target="_blank">View Certificate</a>
+        </div>
+        <div class="cert-box">
+            <h3>Predict Employee Turnover using IBM Watson Studio</h3>
+            <p>Issued by IBM</p>
+            <a href="certificates/Employee_Turnover_IBM.pdf" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="cert-box">
+            <h3>Identify Potential Repeat Customers for Your Business</h3>
+            <p>Issued by IBM</p>
+            <a href="certificates/Employee_Turnover_IBM.pdf" target="_blank">View Certificate</a>
+        </div>
+
+        
+        <div class="cert-box">
+            <h3>Python</h3>
+            <p>Issued by IBM</p>
+            <a href="certificates/Employee_Turnover_IBM.pdf" target="_blank">View Certificate</a>
+        </div>
+
+        
+        <div class="cert-box">
+            <h3>Getting Started with Enterprise Data Science</h3>
+            <p>Issued by IBM</p>
+            <a href="certificates/Employee_Turnover_IBM.pdf" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="cert-box">
+            <h3>Cybersecurity Intro</h3>
+            <p>Issued by IBM</p>
+            <a href="certificates/Employee_Turnover_IBM.pdf" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="cert-box">
+            <h3>Identify and Investigate Cybersecurity Threats</h3>
+            <p>Issued by IBM</p>
+            <a href="certificates/Employee_Turnover_IBM.pdf" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="cert-box">
+            <h3>Protect Your Sensitive Data Against Threats</h3>
+            <p>Issued by IBM</p>
+            <a href="certificates/Employee_Turnover_IBM.pdf" target="_blank">View Certificate</a>
+        </div>
+
+        <div class="cert-box">
+            <h3>Add Authentication to your Web Apps using IBM Cloud App ID</h3>
+            <p>Issued by IBM</p>
+            <a href="certificates/Employee_Turnover_IBM.pdf" target="_blank">View Certificate</a>
+        </div>
+        
+    </div>
+
+    <div id="GreatLearning" class="cert-container">
+        <div class="cert-box">
+            <h3>Certification Title 2</h3>
+            <p>Issued by Great Learning</p>
+            <a href="certificates/Great_Learning_Cert.pdf" target="_blank">View Certificate</a>
+        </div>
+    </div>
+
+    <div id="Coursera" class="cert-container">
+        <div class="cert-box">
+            <h3>Certification Title 3</h3>
+            <p>Issued by Coursera</p>
+            <a href="certificates/Coursera_Cert.pdf" target="_blank">View Certificate</a>
+        </div>
+    </div>
+</section>
+
+
+section.active{
+   visibility: visible;
+   opacity: 1;
+   overflow: auto; 
+}
+
+
+function showCerts(company) {
+    document.querySelectorAll('.cert-container').forEach(container => {
+        container.style.display = 'none';
+    });
+    document.getElementById(company).style.display = 'grid';
