@@ -1,6 +1,12 @@
 const navLinks = document.querySelectorAll('header nav a');
 const logoLink = document.querySelector('.logo');
 const sections = document.querySelectorAll('section');
+const menuIcon = document.querySelector('#menu-icon');
+
+
+menuIcon.addEventListener('click', () => {
+menuIcon.classList.toggle('fa-x');
+});
 
 const activePage = () =>{
     const header =document.querySelector('header');

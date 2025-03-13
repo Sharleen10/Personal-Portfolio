@@ -66,6 +66,7 @@ header.active{
     font-weight: 700;
 }
 
+
 nav a{
     font-size: 2rem;
     color: var(--black-color);
@@ -74,6 +75,7 @@ nav a{
     transition: .5s;
 
 }
+
 
 nav a:hover,
 nav a.active{
@@ -888,6 +890,140 @@ h2 {
 }
 
 /* Media Queries for Responsiveness */
+@media screen and (max-width: 1200px) {
+    html{
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    header{
+        padding: 2rem 4%;
+    }
+    section {
+        padding: 10rem 4% 2rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .contact {
+        padding: 30px;
+    }
+
+    .container-cont {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-cont .contactInfo {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .form-container {
+        width: 90%; /* Makes form wider on tablets */
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 95%; /* Adjusts for smaller screens */
+        padding: 10px;
+    }
+
+    .input-data input,
+    .input-data textarea {
+        font-size: 14px; /* Reduces font size for better fit */
+    }
+
+    .input-data i {
+        min-width: 35px;
+        font-size: 16px;
+    }
+
+    .input-data input[type="submit"] {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        width: 100%; /* Full width for small screens */
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    .input-data {
+        flex-direction: column; /* Stacks icon and input */
+        align-items: stretch;
+    }
+
+    .input-data i {
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .input-data input,
+    .input-data textarea {
+        border-radius: 0 0 20px 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .form-container {
+        width: 100%; /* Full width for small screens */
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    .input-data {
+        flex-direction: column; /* Stacks icon and input */
+        align-items: stretch;
+    }
+
+    .input-data i {
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .input-data input,
+    .input-data textarea {
+        border-radius: 0 0 20px 20px;
+    }
+}
+
+@media screen  and (max-width: 768px){
+    #menu-icon{
+        display: block;
+    }
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        background: var(--bg-color);
+        border-top:  .1rem solid rgba(0, 0, 0, -2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, -2);
+        text-align: center;
+        display: none;
+    }
+    nav.active{
+        display: block;
+    }
+    nav a {
+        display: block;
+        margin: 4rem 0;
+    }
+
+   
+    
+}
+
+
 @media (max-width: 768px) {
     .chatbot-box {
         width: 300px;
