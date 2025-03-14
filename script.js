@@ -112,3 +112,42 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+// Dark Mode Toggle Functionality
+document.addEventListener("DOMContentLoaded", () => {
+    // Create the dark mode toggle button
+    const body = document.body;
+    const darkModeToggle = document.createElement('div');
+    darkModeToggle.className = 'dark-mode-toggle';
+    darkModeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    document.querySelector('header').appendChild(darkModeToggle);
+    
+    // Check for saved user preference
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    
+    // Apply initial theme
+    if (isDarkMode) {
+        body.classList.add('dark-theme');
+        darkModeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    }
+    
+    // Toggle theme on click
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-theme');
+        const isDark = body.classList.contains('dark-theme');
+        localStorage.setItem('darkMode', isDark);
+        
+        // Change icon based on current mode
+        darkModeToggle.innerHTML = isDark ? 
+            '<i class="fa-solid fa-sun"></i>' : 
+            '<i class="fa-solid fa-moon"></i>';
+        
+        // Re-apply barsBox effect
+        const barsBox = document.querySelector('.bars-box');
+        barsBox.classList.remove('active');
+        setTimeout(() => {
+            barsBox.classList.add('active');
+        }, 1100);
+    });
+});

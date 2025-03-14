@@ -16,8 +16,37 @@
     --disabled-color: #fff3;
     --white-color: #fff;
     --text-color: #2F4F4F;
-
 }
+
+/* Dark Mode Variables
+
+.dark-mode {
+    --bg-color: #121212;
+    --second-bg-color: #1E1E1E;
+    --main-color: #2196F3;
+    --black-color: #f0f0f0;
+    --text-color: #f0f0f0;
+    --disabled-color: #0003;
+    --white-color: #121212;
+}
+    */
+
+/* Theme Toggle Button Styles */
+/*
+.theme-toggle {
+    font-size: 2.3rem;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--black-color);
+}/
+/*
+.theme-toggle:hover {
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+*/
+
 
 html{
     font-size: 62.5%;
@@ -890,5 +919,85 @@ h2 {
 #send-btn i {
     font-size: 1.6rem;
 }
+
+/* Dark Mode Styles */
+.dark-mode-toggle {
+    font-size: 2.3rem;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--black-color);
+}
+
+.dark-mode-toggle:hover {
+    color: var(--main-color);
+}
+
+/* Dark Theme Variables */
+.dark-theme {
+    --bg-color: #252525;
+    --second-bg-color: #2d2d2d;
+    --main-color: #00BFFF;
+    --black-color: #f5f5f5;
+    --disabled-color: #333;
+}
+
+/* Dark Theme Specific Adjustments */
+.dark-theme .logo {
+    color: var(--black-color);
+}
+
+.dark-theme .bars-box .bar {
+    background: var(--bg-color);
+}
+
+.dark-theme .home-img .img-box .img-item {
+    background: var(--bg-color);
+    border: 0.01rem solid var(--second-bg-color);
+}
+
+.dark-theme .chatbot-icon {
+    background-color: var(--main-color);
+}
+
+.dark-theme .chatbot-header {
+    background-color: var(--main-color);
+}
+
+.dark-theme .user-message .message-content {
+    background-color: var(--main-color);
+}
+
+.dark-theme .bot-message .message-content {
+    background-color: var(--second-bg-color);
+}
+
+.dark-theme #send-btn {
+    background-color: var(--main-color);
+}
+
+.dark-theme .about-box .about-btn {
+    background: var(--second-bg-color);
+    border: .2rem solid var(--second-bg-color);
+}
+
+.dark-theme .about-box .about-btn.active {
+    border-color: var(--main-color);
+}
+
+.dark-theme .about-list .about-item {
+    background: var(--second-bg-color);
+}
+
+.dark-theme .cert-box {
+    background: var(--second-bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme .form-container {
+    background: #1a3f5a;
+}
+
+
 
 /* Media Queries for Responsiveness */
