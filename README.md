@@ -1,4 +1,4 @@
-Welcome to my portfolio website! This repository contains the source code for my personal portfolio, where I showcase my skills, education and experiences in IT.
+Welcome to my portfolio website! My Name is Sharleen and this repository contains the source code for my personal portfolio website, where I showcase my skills, education and experiences in IT. It has a chatbot to answer any questions about me related to the website.
 
 🚀 Live Demo
 
@@ -20,19 +20,6 @@ Interactive Chatbot to answer questions about my portfolio
 
 HTML5, CSS3, JavaScript
 GitHub Pages for deployment
-
-📂 Project Structure
-
-/portfolio-website
-│── /src
-│   │── components/        # Reusable UI components
-│   │── pages/             # Different sections
-│   │── assets/            # Images, icons, and other static files
-│── index.html             # Main HTML file
-│── style.css             # Global styles
-│── script.js              # Main JavaScript file
-│── chatbot.js             # Chatbot JavaScript file 
-│── README.md              # Documentation file
 
 🔧 Setup & Installation
 Clone the repository: git clone https://github.com/Sharleen10/personal-portfolio.git
