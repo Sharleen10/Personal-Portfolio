@@ -48,7 +48,7 @@ Feel free to fork this repository and suggest improvements by opening a pull req
 
 If you'd like to connect, feel free to reach out via:
 
-Email: sharleenshabangu@gmail.com
+Email: sharleensshabangu@gmail.com
 
 LinkedIn: (https://www.linkedin.com/in/sharleen-shabangu-a6a1b220a)
 
