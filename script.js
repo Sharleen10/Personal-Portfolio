@@ -44,7 +44,6 @@ navLinks.forEach((link, idx) => {
             link.classList.add('active');
 
             setTimeout(() => {
-                // Find the correct section index since we added Projects section
                 let sectionIndex;
                 if (link.textContent === 'Home') sectionIndex = 0;
                 else if (link.textContent === 'About') sectionIndex = 1;
@@ -81,28 +80,13 @@ function showCerts(company) {
     }, 100);
 }
 
-function markClicked(event) {
-    event.target.classList.add('clicked');
-    localStorage.setItem(event.target.href, 'clicked');
-}
-
-window.onload = function () {
-    // Initialize certificate links
-    document.querySelectorAll('.cert-box a').forEach(link => {
-        if (localStorage.getItem(link.href) === 'clicked') {
-            link.classList.add('clicked');
-        }
-        link.addEventListener('click', markClicked);
+// Temporary click state for buttons
+document.querySelectorAll('.project-link, .cert-box a').forEach(link => {
+    link.addEventListener('click', function() {
+        this.classList.add('clicked');
+        setTimeout(() => this.classList.remove('clicked'), 1000);
     });
-
-    // Initialize project links
-    document.querySelectorAll('.project-link').forEach(link => {
-        if (localStorage.getItem(link.href) === 'clicked') {
-            link.classList.add('clicked');
-        }
-        link.addEventListener('click', markClicked);
-    });
-}
+});
 
 // About tabs functionality
 document.addEventListener("DOMContentLoaded", () => {
@@ -150,4 +134,10 @@ document.addEventListener("DOMContentLoaded", () => {
             barsBox.classList.add('active');
         }, 1100);
     });
+});
+
+// Reset form on page load
+window.addEventListener('load', function() {
+    const form = document.querySelector('form');
+    if (form) form.reset();
 });
