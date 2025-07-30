@@ -554,8 +554,223 @@ font-size: 4.5rem;;
     background-color: var(--main-color);
 }
 
+/* Add this Projects section code to your existing CSS */
 
+/* Projects Section */
+.projects {
+    padding: 100px 9% 80px;
+    background: var(--bg-color);
+    min-height: 100vh;
+}
 
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.project-box {
+    background: var(--second-bg-color);
+    border-radius: 10px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.project-info h3 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--main-color);
+}
+
+.project-info p {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.tech-stack {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.tech-stack span:first-child {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.tech {
+    background: var(--main-color);
+    color: var(--bg-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 10px 25px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    border: 1px solid var(--main-color);
+}
+
+.project-link:hover {
+    background: transparent;
+    color: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.project-link.clicked {
+    background: var(--black-color);
+    border-color: var(--black-color);
+}
+
+/* Optional Filter Buttons (uncomment if using filtering) */
+/*
+.project-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    background: var(--second-bg-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 10px var(--main-color);
+}
+*/
+
+/* Project Images */
+.project-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-box:hover .project-img img {
+    transform: scale(1.05);
+}
+
+/* Adjustments for project layout with images */
+.project-info {
+    padding: 0 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 450px) {
+    .project-img {
+        height: 150px;
+    }
+}
+
+/* Dark Theme Adjustments for Projects */
+.dark-theme .project-box {
+    background: var(--second-bg-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .project-info p {
+    color: var(--white-color);
+}
+
+.dark-theme .project-link:hover {
+    color: var(--main-color);
+    background: transparent;
+}
+
+/* Media Queries for Projects */
+@media (max-width: 991px) {
+    .projects {
+        padding: 80px 5% 60px;
+    }
+    
+    .projects-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        padding: 70px 4% 50px;
+    }
+    
+    .project-box {
+        padding: 25px;
+    }
+    
+    .project-info h3 {
+        font-size: 2rem;
+    }
+    
+    .project-info p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-box {
+        padding: 20px;
+    }
+    
+    .tech-stack span:first-child {
+        width: 100%;
+    }
+}
 
 
 /*Contact Section*/
